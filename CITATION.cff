@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use, reference, or build upon KazeneOS in research, articles, specifications, or derivative works, please cite it using the metadata below."
+title: "KazeneOS"
+type: software
+version: "0.1.0"
+date-released: 2026-05-07
+license: "CC-BY-4.0"
+abstract: >-
+  KazeneOS is a civilizational upper-layer OS for the AI era, integrating
+  question, trace, resonance, circulation, and governance into a single
+  structural framework. Royalty OS is positioned within KazeneOS as a
+  value-circulation sub-OS that implements return through Permission,
+  Trace, and Allocation.
+authors:
+  - family-names: "Alpha"
+    given-names: "Shidenkai"
+keywords:
+  - KazeneOS
+  - Royalty OS
+  - civilizational OS
+  - trace architecture
+  - value circulation
+  - AI governance
+  - AI philosophy
+  - provenance
+repository-code: "https://github.com/SamuraiWriter7/kazene-os"
