@@ -1,8 +1,8 @@
 # KazeneOS
 
-KazeneOS is a civilizational operating system for the AI era, integrating question, trace, resonance, circulation, and governance into a single upper-layer structure.  
+KazeneOS is a civilizational upper-layer OS for the AI era, integrating question, trace, resonance, circulation, and governance into a single structural framework.  
 Royalty OS is a value-circulation sub-OS inside KazeneOS, implementing Permission, Trace, and Allocation as a practical return loop.  
-Together, KazeneOS and Royalty OS connect meaning and implementation, making value generation, recording, and return structurally auditable.
+Together, they connect meaning and implementation, making value generation, recording, and return structurally legible and auditable.
 
 ---
 
@@ -11,7 +11,7 @@ Together, KazeneOS and Royalty OS connect meaning and implementation, making val
 **KazeneOS** is an upper-layer civilizational OS for the AI era.
 
 It is not a single application, protocol, or payment system.  
-It is a structural framework for thinking about how:
+It is a structural framework for understanding how:
 
 - questions generate movement,
 - traces remain between systems and responses,
@@ -19,7 +19,7 @@ It is a structural framework for thinking about how:
 - value circulates,
 - responsibility and governance become necessary.
 
-KazeneOS is designed to provide the **upper architecture** within which more specialized subsystems can operate.
+KazeneOS provides the **upper architecture** within which more specialized subsystems can operate.
 
 In short:
 
@@ -36,7 +36,7 @@ In short:
 
 ## Why KazeneOS exists
 
-AI-era systems increasingly generate value by absorbing, recombining, summarizing, retrieving, transforming, and redistributing knowledge.
+AI-era systems increasingly generate value by absorbing, retrieving, summarizing, transforming, recombining, and redistributing knowledge.
 
 However, in many current environments:
 
@@ -47,7 +47,7 @@ However, in many current environments:
 
 KazeneOS exists to address this structural gap.
 
-It provides a way to think about AI-era systems not only as model pipelines or product stacks, but as **civilizational circulation structures** in which meaning, trace, responsibility, and return must remain connected.
+It provides a way to think about AI-era systems not only as model pipelines or product stacks, but as **civilizational circulation structures** in which meaning, trace, responsibility, and return remain connected.
 
 ---
 
@@ -58,7 +58,7 @@ KazeneOS is based on the idea that AI-era civilization cannot be understood only
 - model capability,
 - product speed,
 - output quality,
-- legal compliance in isolation.
+- isolated legal compliance.
 
 Instead, it must be understood through a wider structural frame:
 
@@ -115,17 +115,17 @@ Examples:
 - which document,
 - which chunk,
 - which source,
-- at what time,
-- for which response or query.
+- when it was retrieved,
+- for which query or response.
 
 ### Influence Trace
 Estimates what affected the output or behavior.
 
 Examples:
-- output contribution,
 - reflected summaries,
-- semantic influence,
-- approximate contribution from retrieved or learned material.
+- semantic contribution,
+- approximate influence from retrieved material,
+- contribution estimates used for return.
 
 ### Audit Trace
 Records who guarantees the record, under what conditions, and with what verification history.
@@ -134,8 +134,8 @@ Examples:
 - signatures,
 - verification events,
 - revision history,
-- dispute-related review,
-- audit metadata.
+- audit metadata,
+- dispute-related review history.
 
 In short:
 
@@ -144,6 +144,8 @@ In short:
 - **Audit Trace** = who guarantees the record
 
 This architecture allows KazeneOS and Royalty OS to connect meaning, evidence, and return in a more realistic way.
+
+For more detail, see [`docs/trace-architecture.md`](docs/trace-architecture.md).
 
 ---
 
@@ -206,9 +208,9 @@ KazeneOS
 
 This means:
 
-KazeneOS provides the upper structure.
-Trace Architecture provides the shared interface.
-Subsystems provide operational specialization.
+KazeneOS provides the upper structure
+Trace Architecture provides the shared interface
+Subsystems provide operational specialization
 Design Principles
 
 KazeneOS is guided by the following principles.
@@ -251,23 +253,33 @@ the relationship between KazeneOS and its subsystems,
 the central role of trace architecture,
 the conceptual map for future implementation repositories.
 
-It is therefore best understood as a structural root, not as a single executable module.
+It should therefore be understood as a structural root, not as a single executable module.
 
 Repository Structure
 .
 ├─ README.md
-├─ docs/
-│  ├─ one-page-overview.md
-│  ├─ subsystems.md
-│  └─ relationship-to-kazene-os.md
-
-As the repository evolves, additional documents may be added for:
-
-subsystem mapping,
-architecture diagrams,
-trace model definitions,
-governance notes,
-implementation bridge documents.
+├─ LICENSE
+├─ CITATION.cff
+└─ docs/
+   ├─ one-page-overview.md
+   ├─ subsystems.md
+   ├─ relationship-to-kazene-os.md
+   └─ trace-architecture.md
+File Guide
+README.md
+Entry point and high-level definition of KazeneOS
+LICENSE
+Content license for the repository
+CITATION.cff
+Citation metadata for research, articles, and derivative works
+docs/one-page-overview.md
+One-page summary of KazeneOS × Royalty OS
+docs/subsystems.md
+Overview of subsystem OS models inside KazeneOS
+docs/relationship-to-kazene-os.md
+Structural relationship between KazeneOS and Royalty OS
+docs/trace-architecture.md
+Definition of Access Trace, Influence Trace, and Audit Trace
 Start Here
 
 If you are new to this repository, the recommended reading order is:
@@ -280,6 +292,8 @@ docs/subsystems.md
 The subsystem model inside KazeneOS
 docs/relationship-to-kazene-os.md
 How Royalty OS fits inside KazeneOS
+docs/trace-architecture.md
+The trace-layer model connecting meaning, evidence, and return
 Scope
 
 This repository is primarily concerned with:
@@ -341,10 +355,19 @@ Related Documents
 docs/one-page-overview.md
 docs/subsystems.md
 docs/relationship-to-kazene-os.md
+docs/trace-architecture.md
 License
 
-TBD
+This repository is released under the Creative Commons Attribution 4.0 International (CC BY 4.0) license.
+
+You are free to share, reuse, adapt, and build upon this work, including for derivative specifications and explanatory materials, provided that appropriate attribution is given.
+
+Note:
+The license applies to the contents of this repository unless otherwise stated.
+Project names, logos, and branding conventions may be governed separately from the content license.
 
 Citation
 
-TBD
+If you use, reference, or build upon KazeneOS in research, articles, specifications, or derivative works, please cite this repository.
+
+Citation metadata is provided in CITATION.cff
