@@ -1,0 +1,35 @@
+name: Validate Kazene Windmill v1.0
+
+on:
+  push:
+    paths:
+      - "windmill/**"
+      - ".github/workflows/kazene-windmill-validation.yml"
+  pull_request:
+    paths:
+      - "windmill/**"
+      - ".github/workflows/kazene-windmill-validation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  policy:
+    name: Synthetic policy conformance
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run policy tests
+        run: python windmill/scripts/validate.py

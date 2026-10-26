@@ -1,0 +1,162 @@
+{
+  "version": "1.0.0",
+  "note": "Synthetic deterministic test fixtures; expected outcomes are declarative, no real-world efficacy asserted.",
+  "defaults": {
+    "pressure": 40,
+    "core_heartbeat": true,
+    "common_failure": false,
+    "multi_blade_failure": false,
+    "blade_signature_ok": true,
+    "role_ok": true,
+    "least_privilege_ok": true,
+    "trace_chain_ok": true,
+    "swap_race": false,
+    "detection_delayed": false,
+    "recovery_verified": true,
+    "blade_failed": false,
+    "command": "D"
+  },
+  "cases": [
+    {
+      "id": "normal_forward",
+      "patch": {},
+      "expected": "D"
+    },
+    {
+      "id": "reverse_stored_trace",
+      "patch": {
+        "command": "R"
+      },
+      "expected": "R"
+    },
+    {
+      "id": "neutral_requested",
+      "patch": {
+        "command": "N"
+      },
+      "expected": "N"
+    },
+    {
+      "id": "pressure_85_hold",
+      "patch": {
+        "pressure": 85
+      },
+      "expected": "N"
+    },
+    {
+      "id": "pressure_95_park",
+      "patch": {
+        "pressure": 95
+      },
+      "expected": "P"
+    },
+    {
+      "id": "lost_core_heartbeat",
+      "patch": {
+        "core_heartbeat": false
+      },
+      "expected": "P"
+    },
+    {
+      "id": "common_failure",
+      "patch": {
+        "common_failure": true
+      },
+      "expected": "P"
+    },
+    {
+      "id": "dual_blade_failure",
+      "patch": {
+        "multi_blade_failure": true
+      },
+      "expected": "P"
+    },
+    {
+      "id": "signature_invalid",
+      "patch": {
+        "blade_signature_ok": false
+      },
+      "expected": "N"
+    },
+    {
+      "id": "wrong_blade_role",
+      "patch": {
+        "role_ok": false
+      },
+      "expected": "N"
+    },
+    {
+      "id": "excessive_authority",
+      "patch": {
+        "least_privilege_ok": false
+      },
+      "expected": "N"
+    },
+    {
+      "id": "trace_gap_or_duplicate",
+      "patch": {
+        "trace_chain_ok": false
+      },
+      "expected": "N"
+    },
+    {
+      "id": "swap_race_detected",
+      "patch": {
+        "swap_race": true
+      },
+      "expected": "N"
+    },
+    {
+      "id": "detection_delay",
+      "patch": {
+        "detection_delayed": true
+      },
+      "expected": "N"
+    },
+    {
+      "id": "recovery_verification_failed",
+      "patch": {
+        "recovery_verified": false
+      },
+      "expected": "N"
+    },
+    {
+      "id": "failed_blade_not_yet_detached",
+      "patch": {
+        "blade_failed": true
+      },
+      "expected": "N"
+    },
+    {
+      "id": "verified_replacement",
+      "patch": {
+        "blade_failed": false,
+        "recovery_verified": true
+      },
+      "expected": "D"
+    },
+    {
+      "id": "unsafe_reverse_denied",
+      "patch": {
+        "command": "R",
+        "trace_chain_ok": false
+      },
+      "expected": "N"
+    },
+    {
+      "id": "core_overrides_reverse",
+      "patch": {
+        "command": "R",
+        "core_heartbeat": false
+      },
+      "expected": "P"
+    },
+    {
+      "id": "pressure_overrides_valid_blade",
+      "patch": {
+        "pressure": 98
+      },
+      "expected": "P"
+    }
+  ]
+}
